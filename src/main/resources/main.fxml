@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.myorg.labmanager.ui.MainController">
+    <children>
+        <TabPane>
+            <Tab text="Equipos">
+              <VBox VBox.vgrow="ALWAYS" spacing="8" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+                <!-- Tabla y botones de equipos -->
+                <TableView fx:id="tableEquipos" prefHeight="200">
+                    <columns>
+                    <TableColumn fx:id="colId" text="ID Equipo" prefWidth="80"/>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="180"/>
+                    <TableColumn fx:id="colTipo" text="Tipo" prefWidth="120"/>
+                    <TableColumn fx:id="colDisponibilidad" text="Disponibles" prefWidth="80"/>
+                    <TableColumn fx:id="colTotal" text="Total" />
+                    </columns>
+                </TableView>  
+                <HBox spacing="6">
+                  <Button text="Agregar" onAction="#onAgregarEquipo"/>
+                  <Button text="Editar" onAction="#onEditarEquipo"/>
+                  <Button text="Eliminar" onAction="#onEliminarEquipo"/>
+                  <Button text="Importar equipos" onAction="#onImportarCSV"/>
+                </HBox>
+              </VBox>
+            </Tab>
+  
+            <Tab text="Usuarios">
+              <VBox spacing="8" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+                <TableView fx:id="tableUsuarios" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colUsuarioId" text="ID Usuario" />
+                    <TableColumn fx:id="colUsuarioNombre" text="Nombre" />
+                    <TableColumn fx:id="colUsuarioTipo" text="Tipo" />
+                </columns>
+            </TableView> 
+                <HBox spacing="6">
+                  <Button text="Agregar" onAction="#onAgregarUsuario"/>
+                  <Button text="Editar" onAction="#onEditarUsuario"/>
+                  <Button text="Eliminar" onAction="#onEliminarUsuario"/>
+                </HBox>
+              </VBox>
+            </Tab>
+            
+            <Tab text="Prestamos">
+              <VBox spacing="8" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+                <TableView fx:id="tablePrestamos" prefHeight="200">
+                    <columns>
+                        <TableColumn fx:id="colPrestamoId" text="ID Préstamo" />
+                        <TableColumn fx:id="colEquipoId" text="ID Equipo" />
+                        <TableColumn fx:id="colEstado" text="Estado" />
+                        <TableColumn fx:id="colCantidad" text="Cantidad" />
+                        <TableColumn fx:id="colFecha" text="Fecha Préstamo" />
+                        <TableColumn fx:id="colFechaD" text="Fecha Devolucion" />
+                    </columns>
+                </TableView> 
+                <HBox spacing="6">
+                   <Button text="Prestar" onAction="#onPrestar"/>
+                   <Button text="Devolver" onAction="#onDevolver"/>
+                   <Button text="Reporte" onAction="#onGenerarReporte"/>
+                </HBox>
+                <TextArea fx:id="areaReporte">
+                    
+                </TextArea>
+              </VBox>
+            </Tab>
+        </TabPane>
+    </children>
+</AnchorPane>
