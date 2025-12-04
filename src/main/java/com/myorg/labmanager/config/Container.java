@@ -2,7 +2,6 @@
 package com.myorg.labmanager.config;
 
 import com.myorg.labmanager.domain.model.Equipo;
-import com.myorg.labmanager.domain.model.EquipoFactory;
 import com.myorg.labmanager.domain.model.Usuario;
 import com.myorg.labmanager.domain.service.EquipoService;
 import com.myorg.labmanager.domain.service.PrestamoService;
@@ -56,7 +55,6 @@ public class Container {
         this.regla = new LimitePorUsuarioStrategy(3);
         this.eventBus = new EventBus();
         this.eventBus.register(new LogNotifier());
-        //this.eventBus.register(new EmailNotifierDecorator(new ConsoleNotifier()));
         
         // Servicios
         this.prestamoService = new PrestamoService(equipoRepository, prestamoRepository, regla, eventBus);
