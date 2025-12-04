@@ -60,9 +60,9 @@ public class ReporteFacade {
         ReporteInventario reporte = generarReporteCompleto();
         StringBuilder sb = new StringBuilder();
         
-        sb.append("═══════════════════════════════════════════\n");
+        sb.append("-----------------------------------\n");
         sb.append("    REPORTE DE INVENTARIO - LAB MANAGER\n");
-        sb.append("═══════════════════════════════════════════\n");
+        sb.append("-----------------------------------\n");
         sb.append(String.format("Fecha: %s\n\n", reporte.getFechaGeneracion()));
         
         sb.append("ESTADÍSTICAS GENERALES:\n");
@@ -72,7 +72,7 @@ public class ReporteFacade {
         sb.append(String.format("  • Préstamos activos: %d\n\n", reporte.getPrestamosActivos()));
         
         if (!reporte.getEquiposAgotados().isEmpty()) {
-            sb.append("⚠ EQUIPOS AGOTADOS:\n");
+            sb.append("EQUIPOS AGOTADOS:\n");
             for (Equipo e : reporte.getEquiposAgotados()) {
                 sb.append(String.format("  • %s - %s\n", e.getTipo(), e.getNombre()));
             }
@@ -80,7 +80,7 @@ public class ReporteFacade {
         }
         
         if (!reporte.getEquiposBajoStock().isEmpty()) {
-            sb.append("⚠ EQUIPOS CON BAJO STOCK:\n");
+            sb.append("EQUIPOS CON BAJO STOCK:\n");
             for (Equipo e : reporte.getEquiposBajoStock()) {
                 sb.append(String.format("  • %s - Solo %d disponible(s)\n", 
                     e.getNombre(), e.getCantidadDisponible()));
@@ -88,7 +88,7 @@ public class ReporteFacade {
             sb.append("\n");
         }
         
-        sb.append("═══════════════════════════════════════════\n");
+        sb.append("-----------------------------------\n");
         
         return sb.toString();
     }
