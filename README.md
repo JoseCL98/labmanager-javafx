@@ -58,12 +58,12 @@ Demostrar dominio avanzado de diseño orientado a objetos mediante un sistema re
 
 ## Funcionalidades
 
-- ✅ **Gestión de equipos**: alta, edición, eliminación, importación CSV.
-- ✅ **Gestión de usuarios**: estudiantes, profesores, etc.
-- ✅ **Préstamos y devoluciones**: con validación de reglas y stock.
-- ✅ **Notificaciones**: alertas por consola cuando el stock está bajo.
-- ✅ **Reportes**: estado del inventario, equipos agotados, estadísticas por tipo.
-- ✅ **Persistencia real**: usa **H2 en modo archivo** (los datos persisten entre ejecuciones).
+-  **Gestión de equipos**: alta, edición, eliminación, importación CSV para equipos.
+-  **Gestión de usuarios**: estudiantes, profesores, etc.
+-  **Préstamos y devoluciones**: con validación de reglas y stock.
+-  **Notificaciones**: alertas por consola cuando el stock está bajo.
+-  **Reportes**: estado del inventario, equipos agotados, estadísticas por tipo.
+-  **Persistencia real**: usa **H2 en modo archivo** (los datos persisten entre ejecuciones).
 
 ---
 
