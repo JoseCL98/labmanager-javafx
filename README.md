@@ -1,10 +1,10 @@
-# 🧪 Lab Manager – Gestor de Inventario de Laboratorio
+# Lab Manager – Gestor de Inventario de Laboratorio
 
 > **Sistema de gestión de equipos, usuarios y préstamos en un laboratorio académico**, construido en **Java** con arquitectura limpia, persistencia relacional (H2 + JPA), y respeto riguroso a los principios **SOLID**, **GoF** y **GRASP**.
 
 ---
 
-## ✅ Objetivo
+## Objetivos
 
 Demostrar dominio avanzado de diseño orientado a objetos mediante un sistema realista que:
 
@@ -16,7 +16,7 @@ Demostrar dominio avanzado de diseño orientado a objetos mediante un sistema re
 
 ---
 
-## 🧱 Arquitectura y Tecnologías
+## Arquitectura y Tecnologías
 
 | Capa | Tecnologías / Patrones |
 |------|------------------------|
@@ -29,16 +29,16 @@ Demostrar dominio avanzado de diseño orientado a objetos mediante un sistema re
 
 ---
 
-## 🧩 Principios y Patrones Aplicados
+## Principios y Patrones Aplicados
 
-### 🔹 SOLID
+### - SOLID
 - **SRP**: Cada clase tiene una única responsabilidad (ej. `PrestamoService` no maneja UI ni persistencia directa).
 - **OCP**: Nuevas reglas de préstamo se añaden mediante `ReglaPrestamoStrategy`.
 - **LSP**: Todas las implementaciones de repositorios cumplen su interfaz sin romper contratos.
 - **ISP**: Interfaces pequeñas y específicas (`EquipoRepository`, `StockObserver`, `DataImporter`).
 - **DIP**: Servicios dependen de abstracciones, no de implementaciones concretas.
 
-### 🔹 Patrones GoF
+### - Patrones GoF
 | Categoría | Patrón | Ejemplo |
 |----------|--------|--------|
 | **Creacionales** | Factory Method | `EquipoFactory.create()` |
@@ -48,7 +48,7 @@ Demostrar dominio avanzado de diseño orientado a objetos mediante un sistema re
 | **Comportamiento** | Strategy | `LimitePorUsuarioStrategy` |
 | | Observer | `EventBus` + `LogNotifier` |
 
-### 🔹 GRASP
+### - GRASP
 - **Controller**: `MainController` y `RegistrarPrestamoController` coordinan la interacción usuario-sistema.
 - **Information Expert**: `Equipo` sabe si está disponible; `Prestamo` sabe si puede devolverse.
 - **Low Coupling / High Cohesion**: Clases bien encapsuladas y acopladas solo a interfaces.
@@ -56,7 +56,7 @@ Demostrar dominio avanzado de diseño orientado a objetos mediante un sistema re
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - ✅ **Gestión de equipos**: alta, edición, eliminación, importación CSV.
 - ✅ **Gestión de usuarios**: estudiantes, profesores, etc.
@@ -67,7 +67,7 @@ Demostrar dominio avanzado de diseño orientado a objetos mediante un sistema re
 
 ---
 
-## 📦 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 src/
@@ -90,7 +90,7 @@ src/
 
 ---
 
-## ▶️ Cómo Ejecutar
+## Cómo Ejecutar
 
 ### Requisitos
 - JDK 17+  
@@ -110,7 +110,7 @@ src/
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es de carácter académico. Libre para uso educativo.
 
